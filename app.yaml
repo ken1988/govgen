@@ -1,0 +1,35 @@
+application: airport-board
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: django
+  version: "1.4"
+
+handlers:
+- url: /fonts/(.*\.otf)
+  static_files: fonts/\1
+  upload: fonts/(.*\.otf)
+  mime_type: application/x-font-otf
+
+- url: /fonts/(.*\.ttf)
+  static_files: fonts/\1
+  upload: fonts/(.*\.ttf)
+  mime_type: application/x-font-ttf
+
+- url: /css
+  static_dir: css
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /riots
+  static_dir: riots
+
+- url: /js
+  static_dir: js
+
+- url: /.*
+  script: main.app
