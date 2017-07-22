@@ -1,5 +1,5 @@
-application: airport-board
-version: 2
+application: gov-generator
+version: 1
 runtime: python27
 api_version: 1
 threadsafe: true

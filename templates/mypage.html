@@ -26,28 +26,21 @@
 </head>
 <body>
 <header>
-<nav class="navbar navbar-default">
-<div id="navbar" class="collapse navbar-collapse row" >
-<div><h1>Government Generator</h1></div>
-<form class="navbar-form" method="post" action="/Signin">
-	<div class="form-group">
-		<input type="text" name="userID" placeholder="メールアドレス" class="form-control">
-		<input type="password" name="password" placeholder="パスワード" class="form-control">
-	</div>
-	<input type="submit" class="btn btn-info" value="ログイン">
-</form>
-</div>
-</nav>
+	<nav class="navbar navbar-default">
+		<div id="navbar" class="collapse navbar-collapse row" >
+			<div>
+				<H1>Government Generator</H1>
+				<div id="country_name" class="alert alert-warning col-lg-2 col-md-3" align="left">
+					<p>{{ country }}でログイン中</p>
+				</div>
+			</div>
+		</div>
+	</nav>
 </header>
 <div class="container">
-	{% if ermsg %}
-	<div class="alert alert-success">
-		<p>{{ ermsg }}</p>
-	</div>
-	{% endif %}
 	<div class="panel panel-primary">
-		<h2>ユーザ登録</h2>
-		<form class="form-horizontal" method="post" action="/User">
+		<h2>新しく作成する</h2>
+		<form class="form-horizontal" method="post" action="">
 		<div class="form-group">
 			<label class="control-label col-sm-3" for="inputEmail">メールアドレス</label>
 			<div class="col-sm-9">
